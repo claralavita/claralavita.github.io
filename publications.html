@@ -3,171 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Publications | RACS Lab</title>
+
+    <title>Publications | Clara Lavita Angelina</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
-    <meta name="description" content="Selected publications by Ali Rospawan in intelligent control systems, fuzzy neural networks, broad learning systems, autonomous mobile robots, and industrial automation.">
 
-    <!-- Open Graph / social sharing -->
+    <meta name="description" content="Selected publications by Clara Lavita Angelina in biomedical imaging, geometric deep learning, medical image segmentation and classification.">
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="RACS Lab">
-    <meta property="og:title" content="Publications | RACS Lab">
-    <meta property="og:description" content="Selected publications by Ali Rospawan in intelligent control systems, fuzzy neural networks, broad learning systems, autonomous mobile robots, and industrial automation.">
-    <meta property="og:url" content="https://rospawan.github.io/publications.html">
-    <meta property="og:image" content="https://rospawan.github.io/images/og-preview.png">
+    <meta property="og:site_name" content="Clara Lavita Angelina">
+    <meta property="og:title" content="Publications | Clara Lavita Angelina">
+    <meta property="og:description" content="Selected publications by Clara Lavita Angelina in biomedical imaging, geometric deep learning, medical image segmentation and classification.">
+    <meta property="og:url" content="https://claralavita.github.io/publications.html">
+    <meta property="og:image" content="https://claralavita.github.io/images/og-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
 
     <style>
-        /* ================= Base Setup ================= */
-        :root { 
-            --bg-color: #F5F4F0; 
-            --primary-color: #4A2545; 
-            --secondary-color: #6B2D5C;
-            --accent-gold: #B8860B;
-            --text-color: #2D1B2E;
-            --badge-bg: #EDE7F0;
-            --badge-gold: #FFF5E5;
-            --badge-gold-text: #B8860B;
-            --badge-q1: #EDE7F0;
-            --badge-q1-text: #4A2545;
-            --badge-q2: #F0EBE0;
-            --badge-q2-text: #8B6914;
-            --badge-q4: #F0F0F0;
-            --badge-q4-text: #555;
-            --badge-sinta: #E8EBF5;
-            --badge-sinta-text: #3F4D8C;
-            --badge-award: #FFEBEB;
-            --badge-award-text: #A93226;
-            --badge-poster: #FFF1E5;
-            --badge-poster-text: #B85C00;
-            --badge-proc: #F5F0EB;
-            --badge-proc-text: #6B5544;
+        :root {
+            --bg-color: #F2F8FC;
+            --primary-color: #5BA9D6;
+            --secondary-color: #7FC4E8;
+            --accent-gold: #2E86C1;
+            --text-color: #1B3A4B;
+            --badge-bg: #E2F1FA;
+            --badge-journal: #E2F1FA;
+            --badge-journal-text: #1F6FA8;
+            --badge-award: #E8F4FB;
+            --badge-award-text: #1F6FA8;
+            --badge-poster: #EAF3E2;
+            --badge-poster-text: #5A7D2A;
+            --badge-proc: #EEF3F6;
+            --badge-proc-text: #4A6577;
         }
         body { background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        
-        /* ================= Header / Nav ================= */
+
         header { background-color: var(--primary-color); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo { 
-            font-size: 1.8rem; 
-            font-weight: 900; 
-            font-style: italic; 
-            color: #FFFFFF; 
-            text-decoration: none; 
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .logo-img {
-            height: 48px;
-            width: auto;
-            display: block;
-        }
+        .logo { font-size: 1.8rem; font-weight: 900; font-style: italic; color: #FFFFFF; text-decoration: none; display: flex; align-items: center; gap: 5px; }
+        .logo-img { height: 48px; width: auto; display: block; }
         nav { display: flex; gap: 20px; }
         nav a { color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 0.95rem; padding-bottom: 5px; transition: 0.3s;}
         nav a:hover, .nav-active { border-bottom: 2px solid #FFFFFF; }
-        
-        .menu-toggle {
-            display: none;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 6px 8px;
-            width: 44px;
-            height: 44px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-        }
-        .menu-toggle span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: #FFFFFF;
-            transition: transform 0.25s ease, opacity 0.25s ease;
-        }
+
+        .menu-toggle { display: none; background: transparent; border: none; cursor: pointer; padding: 6px 8px; width: 44px; height: 44px; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+        .menu-toggle span { display: block; width: 24px; height: 2px; background: #FFFFFF; transition: transform 0.25s ease, opacity 0.25s ease; }
         .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
         .menu-toggle.open span:nth-child(2) { opacity: 0; }
         .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-        /* ================= Layout ================= */
         .container { max-width: 1050px; margin: 50px auto 100px; padding: 0 20px; }
-        h2.section-title { color: var(--primary-color); text-align: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 16px; font-size: 2.2rem; }
+        h2.section-title { color: var(--accent-gold); text-align: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 16px; font-size: 2.2rem; }
         .intro { text-align: center; color: #555; font-size: 1.05rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7;}
         .intro a { color: var(--accent-gold); font-weight: 600; text-decoration: none; }
         .intro a:hover { text-decoration: underline; }
-        
-        /* ================= Stats Bar ================= */
-        .stats-bar {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 60px;
-            flex-wrap: wrap;
-        }
-        .stat-item { text-align: center; }
-        .stat-num {
-            font-size: 2.0rem;
-            font-weight: 900;
-            color: var(--primary-color);
-            line-height: 1;
-        }
-        .stat-label {
-            font-size: 0.85rem;
-            color: #777;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 6px;
-        }
 
-        /* ================= Year Filter ================= */
-        .year-filter {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 0 auto 14px;
-            padding: 18px 20px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .filter-label {
-            font-size: 0.92rem;
-            color: #555;
-            font-weight: 600;
-            margin-right: 4px;
-        }
-        .filter-btn {
-            background: transparent;
-            color: var(--primary-color);
-            border: 1.5px solid var(--primary-color);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            font-family: inherit;
-        }
+        .stats-bar { display: flex; justify-content: center; gap: 40px; margin-bottom: 60px; flex-wrap: wrap; }
+        .stat-item { text-align: center; }
+        .stat-num { font-size: 2.0rem; font-weight: 900; color: var(--accent-gold); line-height: 1; }
+        .stat-label { font-size: 0.85rem; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
+
+        .year-filter { display: flex; align-items: center; gap: 10px; margin: 0 auto 14px; padding: 18px 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); flex-wrap: wrap; }
+        .filter-label { font-weight: 700; color: var(--accent-gold); font-size: 0.9rem; margin-right: 4px; }
+        .filter-btn { padding: 6px 16px; border: 1.5px solid var(--primary-color); background: transparent; color: var(--primary-color); border-radius: 20px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.25s ease; }
         .filter-btn:hover { background: var(--primary-color); color: #fff; }
-        .filter-btn.active { background: var(--primary-color); color: #fff; box-shadow: 0 2px 8px rgba(74,37,69,0.25); }
-        .result-count {
-            text-align: center;
-            color: #777;
-            font-style: italic;
-            margin: 0 0 35px 0;
-            font-size: 0.92rem;
-            min-height: 1.2em;
-            transition: opacity 0.3s ease;
-        }
+        .filter-btn.active { background: var(--primary-color); color: #fff; box-shadow: 0 2px 8px rgba(91,169,214,0.35); }
+        .result-count { text-align: center; color: #888; font-size: 0.9rem; margin: 0 0 30px; font-style: italic; }
         .pub-section.is-empty { display: none; }
 
         @media (max-width: 767px) {
@@ -176,143 +79,56 @@
             .filter-label { width: 100%; text-align: center; margin-bottom: 4px; }
         }
 
-        h3.category-title { 
-            color: var(--primary-color); 
-            border-left: 5px solid var(--primary-color); 
-            padding: 5px 0 5px 15px; 
-            margin-top: 50px; 
-            margin-bottom: 8px; 
-            font-size: 1.6rem; 
-            background: linear-gradient(to right, #EFE9F1, transparent);
-        }
-        .category-note {
-            color: #777;
-            font-size: 0.92rem;
-            margin: 0 0 18px 5px;
-            font-style: italic;
-        }
+        .category-title { color: var(--accent-gold); margin: 45px 0 6px; padding: 8px 14px; border-radius: 8px; font-size: 1.6rem; background: linear-gradient(to right, #E2F1FA, transparent); }
+        .category-note { color: #777; font-size: 0.92rem; margin: 0 0 18px 5px; font-style: italic; }
 
-        /* ================= Publication Items ================= */
-        .pub-list { 
-            background: #fff;
-            border-radius: 12px;
-            padding: 10px 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-        .pub-item { 
-            position: relative;
-            padding: 25px 0 25px 20px;
-            border-bottom: 1px solid #F0F0F0;
-            transition: all 0.3s ease;
-        }
+        .pub-list { background: #fff; border-radius: 12px; padding: 10px 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .pub-item { position: relative; padding: 25px 0 25px 20px; border-bottom: 1px solid #F0F0F0; transition: all 0.3s ease; }
         .pub-item:last-child { border-bottom: none; }
-        .pub-item::before {
-            content: '';
-            position: absolute;
-            top: 30px;
-            left: 0;
-            width: 4px;
-            height: 0;
-            background: var(--primary-color);
-            transition: height 0.3s ease;
-        }
+        .pub-item::before { content: ''; position: absolute; top: 30px; left: 0; width: 4px; height: 0; background: var(--primary-color); transition: height 0.3s ease; }
         .pub-item:hover::before { height: calc(100% - 50px); }
-        .pub-item:hover .pub-title { color: var(--primary-color); }
-        
+        .pub-item:hover .pub-title { color: var(--accent-gold); }
+
         @media (min-width: 768px) {
             .pub-item { display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 30px; }
             .pub-content { flex: 1; min-width: 0; }
             .pub-actions { flex: 0 0 auto; }
         }
-        
-        .pub-title { 
-            font-size: 1.0rem;
-            font-weight: 700;
-            color: #111;
-            margin-bottom: 8px;
-            line-height: 1.4;
-            transition: color 0.3s ease;
-        }
+
+        .pub-title { font-size: 1.0rem; font-weight: 700; color: #111; margin-bottom: 8px; line-height: 1.4; transition: color 0.3s ease; }
         .pub-authors { color: #555; font-size: 0.9rem; margin-bottom: 4px; line-height: 1.5;}
-        .pi-name { font-weight: bold; color: var(--primary-color); }
+        .pi-name { font-weight: bold; color: var(--accent-gold); }
         .pub-venue { font-size: 0.9rem; color: #222; }
-        .journal-name { font-style: italic; font-weight: 700; color: var(--primary-color); }
+        .journal-name { font-style: italic; font-weight: 700; color: var(--accent-gold); }
         .pub-year { font-weight: bold; color: #000; }
-        
+
         .pub-actions { margin-top: 12px; }
-        .btn-read { 
-            display: inline-block;
-            padding: 6px 12px;
-            background: transparent;
-            color: var(--primary-color);
-            border: 1.5px solid var(--primary-color);
-            border-radius: 5px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.25s ease;
-            white-space: nowrap;
-        }
+        .btn-read { display: inline-block; padding: 6px 12px; background: transparent; color: var(--primary-color); border: 1.5px solid var(--primary-color); border-radius: 5px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.25s ease; white-space: nowrap; }
         .btn-read:hover { background-color: var(--primary-color); color: #fff; transform: translateX(3px); }
 
-        /* ================= Badges ================= */
-        .badge { 
-            display: inline-block; 
-            padding: 2px 8px; 
-            border-radius: 4px; 
-            font-size: 0.72rem; 
-            font-weight: bold; 
-            margin-left: 6px; 
-            vertical-align: middle;
-            letter-spacing: 0.5px;
-        }
-        .badge-q1 { background-color: var(--badge-q1); color: var(--badge-q1-text); border: 1px solid #C9B8D0; }
-        .badge-q2 { background-color: var(--badge-q2); color: var(--badge-q2-text); border: 1px solid #E0D5BA; }
-        .badge-q4 { background-color: var(--badge-q4); color: var(--badge-q4-text); border: 1px solid #DDD; }
-        .badge-sinta { background-color: var(--badge-sinta); color: var(--badge-sinta-text); border: 1px solid #C9CFE3; }
-        .badge-award { background-color: var(--badge-award); color: var(--badge-award-text); border: 1px solid #F5B7B1; }
-        .badge-poster { background-color: var(--badge-poster); color: var(--badge-poster-text); border: 1px solid #F5D4B7; }
-        .badge-thesis { background-color: var(--badge-gold); color: var(--badge-gold-text); border: 1px solid #F0D9B0; }
-        .badge-proceedings { background-color: var(--badge-proc); color: var(--badge-proc-text); border: 1px solid #DDD0BE;}
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: bold; margin-left: 6px; vertical-align: middle; letter-spacing: 0.5px; }
+        .badge-journal { background-color: var(--badge-journal); color: var(--badge-journal-text); border: 1px solid #BDDDF0; }
+        .badge-award { background-color: var(--badge-award); color: var(--badge-award-text); border: 1px solid #BDDDF0; }
+        .badge-poster { background-color: var(--badge-poster); color: var(--badge-poster-text); border: 1px solid #CFE0B5; }
+        .badge-proceedings { background-color: var(--badge-proc); color: var(--badge-proc-text); border: 1px solid #D6DEE3;}
 
-        /* ================= Footer ================= */
-        footer { background-color: var(--primary-color); padding: 40px 20px 20px; text-align: center; color: #DCC9E0; font-size: 0.95rem; margin-top: 60px; }
+        footer { background-color: var(--primary-color); padding: 40px 20px 20px; text-align: center; color: #EAF5FB; font-size: 0.95rem; margin-top: 60px; }
         footer a { color: #fff; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
         .footer-links { margin-top: 18px; display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
-        .footer-links a { font-size: 0.95rem; opacity: 0.9; }
+        .footer-links a { font-size: 0.95rem; opacity: 0.92; }
 
-        /* ================= Mobile ================= */
         @media (max-width: 768px) {
             header { padding: 10px 16px; }
             .logo { font-size: 1.4rem; gap: 8px; }
             .logo-img { height: 36px; }
-        
             .menu-toggle { display: flex; }
-        
-            nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background-color: var(--primary-color);
-                flex-direction: column;
-                gap: 0;
-                padding: 8px 0;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-                max-height: calc(100vh - 70px);
-                overflow-y: auto;
-            }
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: var(--primary-color); flex-direction: column; gap: 0; padding: 8px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.2); max-height: calc(100vh - 70px); overflow-y: auto; }
             nav.open { display: flex; }
-            nav a {
-                padding: 14px 24px;
-                border-bottom: 1px solid rgba(255,255,255,0.08);
-                font-size: 0.95rem;
-            }
+            nav a { padding: 14px 24px; border-bottom: 1px solid rgba(255,255,255,0.12); font-size: 0.95rem; }
             nav a:last-child { border-bottom: none; }
         }
-        
+
         @media (max-width: 767px) {
             .container { margin: 30px auto; }
             h2.section-title { font-size: 1.7rem; }
@@ -326,43 +142,22 @@
             .pub-actions { margin-top: 12px; }
             .badge { display: inline-block; margin: 4px 4px 0 0; }
         }
-        
 
-        /* ================= Auto-numbering per section ================= */
-        /* Numbers are now generated by JavaScript (in reverse order, newest = highest),
-           and inserted inline at the start of the title to save vertical space. */
-        .pub-number {
-            display: inline-block;
-            background-color: var(--badge-bg);
-            color: var(--primary-color);
-            border: 1px solid #C9B8D0;
-            border-radius: 4px;
-            padding: 1px 8px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            margin-right: 8px;
-            vertical-align: 2px;     /* nudges badge up to align with title cap-height */
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-        } 
-        
-        
+        .pub-number { display: inline-block; background-color: var(--badge-bg); color: var(--accent-gold); border: 1px solid #BDDDF0; border-radius: 4px; padding: 1px 8px; font-size: 0.72rem; font-weight: 700; margin-right: 8px; vertical-align: 2px; letter-spacing: 0.5px; white-space: nowrap; }
     </style>
 </head>
 <body>
-
     <header>
         <a href="index.html" class="logo">
-            <img src="images/logo.svg" alt="RACS Lab logo" class="logo-img">
-            <span>RACS Lab</span>
+            <span>Clara Lavita</span>
         </a>
         <button class="menu-toggle" aria-label="Toggle navigation" onclick="const n=this.parentElement.querySelector('nav');n.classList.toggle('open');this.classList.toggle('open');">
             <span></span><span></span><span></span>
         </button>
         <nav>
-            <a href="index.html">HOME</a> 
+            <a href="index.html">HOME</a>
             <a href="about.html">ABOUT ME</a>
-            <a href="publications.html" class="nav-active">PUBLICATIONS</a> 
+            <a href="publications.html" class="nav-active">PUBLICATIONS</a>
             <a href="research.html">RESEARCH</a>
             <a href="awards.html">AWARDS</a>
             <a href="activity.html">ACTIVITY</a>
@@ -372,10 +167,9 @@
     <div class="container">
         <h2 class="section-title">Publications</h2>
         <p class="intro">
-            Selected research outputs across intelligent control systems, fuzzy neural and broad learning systems, autonomous mobile robots, visual SLAM, and industrial automation. For a complete and up-to-date list, see my 
-            <a href="https://scholar.google.com/citations?user=oFUWGWoAAAAJ" target="_blank">Google Scholar</a> · 
-            <a href="https://www.researchgate.net/profile/Ali-Rospawan" target="_blank">ResearchGate</a> · 
-            <a href="https://orcid.org/0000-0001-5667-2269" target="_blank">ORCID</a>.
+            Selected research outputs across biomedical imaging, geometric deep learning, and medical image segmentation and classification. For a complete and up-to-date list, see my
+            <a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank">Google Scholar</a> &middot;
+            <a href="https://orcid.org/0000-0002-0375-3759" target="_blank">ORCID</a>.
         </p>
 
         <div class="stats-bar">
@@ -388,427 +182,142 @@
                 <div class="stat-label">Journals</div>
             </div>
             <div class="stat-item">
-                <div class="stat-num" data-stat="q1">0</div>
-                <div class="stat-label">Scopus Q1</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num" data-stat="q2">0</div>
-                <div class="stat-label">Scopus Q2</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num" data-stat="sinta">0</div>
-                <div class="stat-label">SINTA-Indexed</div>
-            </div>
-            <div class="stat-item">
                 <div class="stat-num" data-stat="conferences">0</div>
                 <div class="stat-label">Conferences</div>
             </div>
             <div class="stat-item">
-                <div class="stat-num" data-stat="posters">0</div>
-                <div class="stat-label">Posters</div>
+                <div class="stat-num" data-stat="awards">0</div>
+                <div class="stat-label">Award Papers</div>
             </div>
         </div>
 
-        <!-- ================ YEAR FILTER ================ -->
-        <!-- Year buttons after "All" are auto-generated from publication data by JS -->
         <div class="year-filter">
             <span class="filter-label">Filter by year:</span>
             <button class="filter-btn active" data-year="all">All</button>
         </div>
         <p class="result-count" id="result-count"></p>
 
-        <!-- ============================================ -->
         <!-- =========== JOURNAL ARTICLES =============== -->
-        <!-- ============================================ -->
         <section class="pub-section">
         <h3 class="category-title">Journal Articles</h3>
-        <p class="category-note">Peer-reviewed journal papers indexed in Scopus and/or Web of Science.</p>
+        <p class="category-note">Peer-reviewed journal papers in biomedical imaging and AI.</p>
         <div class="pub-list">
 
-            <!-- ===== 2026 ===== -->
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Enhanced RGB-D Visual SLAM Using Photogrammetric Keyframe Selection Method and Static Conditional Probability Model<span class="badge badge-q1">SCOPUS Q1</span></div>
-                    <div class="pub-authors">C. C. Tsai, <span class="pi-name">A. Rospawan</span>, C. H. Li, H. S. Lin, and S. C. Chen</div>
-                    <div class="pub-venue"><span class="journal-name">IEEE Sensors Journal</span>, vol. 26, no. 9, pp. 13629–13639, <span class="pub-year">2026</span>.</div>
+                    <div class="pub-title">Mod-SE(2): A Geometric Deep Learning Framework for Brain Tumor Classification and Segmentation in MRI Images<span class="badge badge-journal">JOURNAL</span></div>
+                    <div class="pub-authors"><span class="pi-name">C. L. Angelina</span>, F. R. Xiao, S. Vyas, P.-C. Yang, Y. Luo, and H. T. Chang</div>
+                    <div class="pub-venue"><span class="journal-name">Journal of Biomedical Science</span>, vol. 33, Art. 11, <span class="pub-year">2026</span>.</div>
                 </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Enhanced+RGB-D+Visual+SLAM+Photogrammetric+Keyframe+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Autonomous Steering System Using Fuzzy TD3 and GRU-Attention for Omnidirectional AMRs in Dynamic Environments<span class="badge badge-q1">SCOPUS Q1</span></div>
-                    <div class="pub-authors">C. C. Tsai, H. S. Wu, L. H. Chen, <span class="pi-name">A. Rospawan</span>, C. H. Li, and S. C. Chen</div>
-                    <div class="pub-venue"><span class="journal-name">International Journal of Fuzzy Systems</span>, <span class="pub-year">2026</span>.</div>
+                    <div class="pub-title">A Benchmark Study of DeepLabV3+, U-Net++, and Attention U-Net for Blood Cell Segmentation<span class="badge badge-journal">JOURNAL</span></div>
+                    <div class="pub-authors"><span class="pi-name">C. L. Angelina</span> and A. Rospawan</div>
+                    <div class="pub-venue"><span class="journal-name">Green Intelligent Systems and Applications</span>, vol. 5, no. 1, pp. 61&ndash;73, <span class="pub-year">2025</span>.</div>
                 </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Autonomous+Steering+Fuzzy+TD3+GRU-Attention+Omnidirectional+AMRs+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Adaptive Fixed-Time Sliding-Mode Trajectory Following Control of Nonholonomic AMRs with Adaptive Sliding-Mode Observers<span class="badge badge-q1">SCOPUS Q1</span></div>
-                    <div class="pub-authors">C. C. Tsai, C. H. Li, <span class="pi-name">A. Rospawan</span>, and Z. H. Wu</div>
-                    <div class="pub-venue"><span class="journal-name">Asian Journal of Control</span>, <span class="pub-year">2026</span>.</div>
+                    <div class="pub-title">Direct Control Strategy Using Polynomial Fuzzy-Based Adaptive Fractional Order PID Controller<span class="badge badge-journal">JOURNAL</span></div>
+                    <div class="pub-authors">A. Rospawan, <span class="pi-name">C. L. Angelina</span>, et al.</div>
+                    <div class="pub-venue"><span class="journal-name">Makara Journal of Technology</span>, vol. 29, no. 2, <span class="pub-year">2025</span>.</div>
                 </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Adaptive+Fixed-Time+Sliding-Mode+Trajectory+Nonholonomic+AMRs+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Global Cooperative Localization Method Using Fuzzy DDEKF and Broad Learning System for Swarmed Omnidirectional Mobile Robots with Uncertainties<span class="badge badge-q1">SCOPUS Q1</span></div>
-                    <div class="pub-authors">C. C. Tsai, G. H. Yang, S. C. Chen, <span class="pi-name">A. Rospawan</span>, and H. Y. Zheng</div>
-                    <div class="pub-venue"><span class="journal-name">International Journal of Fuzzy Systems</span>, <span class="pub-year">2026</span>.</div>
+                    <div class="pub-title">Classification of Pancreatic Cystic Lesions Using ResNet<span class="badge badge-journal">JOURNAL</span></div>
+                    <div class="pub-authors"><span class="pi-name">C. L. Angelina</span>, C. M. Pan, T. C. Lee, et al.</div>
+                    <div class="pub-venue"><span class="journal-name">Procedia Computer Science</span>, vol. 234, pp. 357&ndash;363, <span class="pub-year">2024</span>.</div>
                 </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Global+Cooperative+Localization+Fuzzy+DDEKF+Broad+Learning+Swarmed+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-            <!-- ===== 2025 ===== -->
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Two-Layer Intelligent Learning Control Using Output Recurrent Fuzzy Neural Long Short-Term Memory Broad Learning System With RMSprop<span class="badge badge-q1">SCOPUS Q1</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. C. Tsai, and C. C. Hung</div>
-                    <div class="pub-venue"><span class="journal-name">IEEE Access</span>, vol. 13, pp. 34334–34349, <span class="pub-year">2025</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Two-Layer+Intelligent+Learning+Control+Output+Recurrent+Fuzzy+Neural+LSTM+BLS+RMSprop+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Intelligent MIMO ORFBLS-Based Setpoint Tracking Control with Its Application to Temperature Control of an Industrial Extrusion Barrel<span class="badge badge-q1">SCOPUS Q1</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. C. Tsai, and C. C. Hung</div>
-                    <div class="pub-venue"><span class="journal-name">International Journal of Fuzzy Systems</span>, vol. 27, pp. 774–790, <span class="pub-year">2025</span>.</div>
+                    <div class="pub-title">Deep-Learning-Enabled Computer-Aided Diagnosis in the Classification of Pancreatic Cystic Lesions<span class="badge badge-journal">JOURNAL</span></div>
+                    <div class="pub-authors">T. C. Lee, <span class="pi-name">C. L. Angelina</span>, et al.</div>
+                    <div class="pub-venue"><span class="journal-name">Diagnostics</span>, vol. 13, no. 7, Art. 1289, <span class="pub-year">2023</span>.</div>
                 </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Intelligent+MIMO+ORFBLS+Setpoint+Tracking+Industrial+Extrusion+Barrel+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Adaptive Nonlinear PID Control of DC Motor Position Using a Polynomial Fuzzy Long Short-Term Memory Neural Network<span class="badge badge-q2">SCOPUS Q2</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. L. Angelina, et al.</div>
-                    <div class="pub-venue"><span class="journal-name">International Journal of Automotive and Mechanical Engineering</span>, vol. 22, iss. 3, pp. 12821–12836, <span class="pub-year">2025</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Adaptive+Nonlinear+PID+DC+Motor+Polynomial+Fuzzy+LSTM+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Direct Control Strategy Using Polynomial Fuzzy-Based Adaptive Fractional Order PID Controller<span class="badge badge-sinta">SINTA 2</span><span class="badge badge-q4">WEB OF SCIENCE Q4</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. L. Angelina, et al.</div>
-                    <div class="pub-venue"><span class="journal-name">Makara Journal of Technology</span>, vol. 29, iss. 2, art. 3, <span class="pub-year">2025</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Direct+Control+Polynomial+Fuzzy+Adaptive+Fractional+Order+PID+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-            <!-- ===== 2024 ===== -->
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Output Recurrent Fuzzy Broad Learning Systems for Adaptive MIMO PID Control: Theory, Simulations, and Application<span class="badge badge-q1">SCOPUS Q1</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. C. Tsai, and C. C. Hung</div>
-                    <div class="pub-venue"><span class="journal-name">IEEE Access</span>, vol. 12, pp. 19388–19404, <span class="pub-year">2024</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Output+Recurrent+Fuzzy+Broad+Learning+Adaptive+MIMO+PID+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-            <!-- ===== 2022 ===== -->
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Adaptive Predictive PID Control Using Recurrent Fuzzy Broad Learning System for Accurate Setpoint Tracking of Digital Nonlinear Time-Delay Dynamic Systems</div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. C. Tsai, and F. C. Tai</div>
-                    <div class="pub-venue"><span class="journal-name">International Journal of iRobotics</span>, vol. 5, no. 3, pp. 26–32, <span class="pub-year">2022</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Adaptive+Predictive+PID+Recurrent+Fuzzy+Broad+Learning+Time-Delay+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
         </div>
-
         </section>
 
-        <!-- ============================================ -->
-        <!-- =========== SINTA JOURNALS ================= -->
-        <!-- ============================================ -->
+        <!-- =========== CONFERENCE PAPERS & PROCEEDINGS =============== -->
         <section class="pub-section">
-        <h3 class="category-title">SINTA-Indexed Journals</h3>
-        <p class="category-note">Peer-reviewed papers indexed in SINTA (Science and Technology Index) — the Indonesian national academic indexing system.</p>
+        <h3 class="category-title">Conference Papers &amp; Proceedings</h3>
+        <p class="category-note">Peer-reviewed conference and proceedings papers.</p>
         <div class="pub-list">
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">A Benchmark Study of DeepLabV3+, U-Net++, and Attention U-Net for Blood Cell Segmentation<span class="badge badge-sinta">SINTA 3</span></div>
-                    <div class="pub-authors">C. L. Angelina and <span class="pi-name">A. Rospawan</span></div>
-                    <div class="pub-venue"><span class="journal-name">Green Intelligent Systems and Applications</span>, vol. 5, no. 1, pp. 61–73, <span class="pub-year">2025</span>.</div>
+                    <div class="pub-title">Towards Smart Scoring: A Mod-Cls-SE(2) Network with Feedback Agent for Mayo Endoscopic Subscore Grading<span class="badge badge-proceedings">SPIE</span></div>
+                    <div class="pub-authors"><span class="pi-name">C. L. Angelina</span>, S. Vyas, H.-Y. Wu, S.-C. Wei, H. T. Chang, and Y. Luo</div>
+                    <div class="pub-venue"><span class="journal-name">Advanced Biomedical and Clinical Diagnostic and Surgical Guidance Systems XXIV</span>, SPIE Photonics West, San Francisco, <span class="pub-year">2026</span>.</div>
                 </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Benchmark+DeepLabV3+U-Net+Attention+U-Net+Blood+Cell+Segmentation+Rospawan" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-            <!-- ===== 2022 ===== -->
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">IoT Application for Conveyor Motor Load Current and Temperature Monitoring Device for Factory Acceptance Test in Industrial Application<span class="badge badge-sinta">SINTA 2</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, J. W. Simatupang, and I. Purnama</div>
-                    <div class="pub-venue"><span class="journal-name">Jurnal ELTIKOM: Jurnal Teknik Elektro, Teknologi Informasi dan Komputer</span>, vol. 6, no. 2, pp. 152–162, <span class="pub-year">2022</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=IoT+Conveyor+Motor+Load+Current+Temperature+Factory+Acceptance+Rospawan+2022" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-            
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Study on Setpoint Tracking Performance of the PID SISO and MIMO Under Noise and Disturbance for Nonlinear Time-Delay Dynamic Systems<span class="badge badge-sinta">SINTA 3</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, Y. K. Yang, P. H. Chen, and C. C. Tsai</div>
-                    <div class="pub-venue"><span class="journal-name">Green Intelligent Systems and Applications</span>, vol. 2, no. 2, pp. 84–95, <span class="pub-year">2022</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Setpoint+Tracking+PID+SISO+MIMO+Noise+Disturbance+Time-Delay+Rospawan+2022" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-            
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Development of Hot Air Dryer Conveyor for Automotive Tampo Printing Parts<span class="badge badge-sinta">SINTA 3</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, J. W. Simatupang, and I. Purnama</div>
-                    <div class="pub-venue"><span class="journal-name">Green Intelligent Systems and Applications</span>, vol. 2, no. 1, pp. 34–41, <span class="pub-year">2022</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://doi.org/10.53623/gisa.v2i1.69" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-            
-            <!-- ===== 2021 ===== -->
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Microcontroller-Based Lead-Acid Battery Balancing System for Electric Vehicle Applications<span class="badge badge-sinta">SINTA 2</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span> and J. W. Simatupang</div>
-                    <div class="pub-venue"><span class="journal-name">Jurnal Elektronika dan Telekomunikasi (JET)</span>, vol. 21, no. 2, pp. 128–139, <span class="pub-year">2021</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Microcontroller+Lead-Acid+Battery+Balancing+Electric+Vehicle+Rospawan+2021" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-            
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Automated Pneumatic System for Car Brake Pedal Test<span class="badge badge-sinta">SINTA 3</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span> and J. W. Simatupang</div>
-                    <div class="pub-venue"><span class="journal-name">Journal IPTEK</span>, vol. 25, no. 2, pp. 145–152, <span class="pub-year">2021</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Automated+Pneumatic+Car+Brake+Pedal+Test+Rospawan+2021" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-            <!-- ===== 2019 ===== -->
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">A Simple, Cheap and Precise Microcontroller-Based DDS Function Generator</div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, J. W. Simatupang, and I. Purnama</div>
-                    <div class="pub-venue"><span class="journal-name">Journal of Electrical and Electronics Engineering</span>, vol. 3, no. 2, pp. 118–121, <span class="pub-year">2019</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Simple+Cheap+Precise+Microcontroller+DDS+Function+Generator+Rospawan+2019" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-        </div>
-
-        </section>
-
-        <!-- ============================================ -->
-        <!-- ========== CONFERENCE PAPERS =============== -->
-        <!-- ============================================ -->
-        <section class="pub-section">
-        <h3 class="category-title">Conference Papers</h3>
-        <p class="category-note">Peer-reviewed papers presented at international and national conferences.</p>
-        <div class="pub-list">
-
-            <!-- ===== 2025 ===== -->
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Intelligent Trajectory Tracking Control Using PFBLS for Omnidirectional Mobile Robots<span class="badge badge-proceedings">PROCEEDINGS ONLY</span><span class="badge badge-award">🎖 HONORARY MENTION · BEST PRESENTATION</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span> and C. C. Tsai</div>
-                    <div class="pub-venue"><span class="journal-name">2025 International Conference on Advanced Robotics and Intelligent Systems (ARIS 2025)</span>, Taichung, Taiwan, <span class="pub-year">August 2025</span>.</div>
-                </div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Positive PFBLS for Intelligent Trajectory Tracking Control of Omnidirectional Mobile Robots<span class="badge badge-proceedings">PROCEEDINGS ONLY</span><span class="badge badge-award">🥈 BEST STUDENT PAPER · 2ND PLACE</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span> and C. C. Tsai</div>
-                    <div class="pub-venue"><span class="journal-name">2025 International Conference on Fuzzy Theory and Its Applications (iFUZZY 2025)</span>, Hsinchu, Taiwan, <span class="pub-year">2025</span>.</div>
+                    <div class="pub-title">Symmetry-Aware Mod-Seg-SE(2) Framework for MRI Brain Tumor Segmentation<span class="badge badge-proceedings">SPIE</span></div>
+                    <div class="pub-authors"><span class="pi-name">C. L. Angelina</span>, S. Vyas, F.-R. Xiao, Y. Luo, and H. T. Chang</div>
+                    <div class="pub-venue"><span class="journal-name">Advanced Biomedical and Clinical Diagnostic and Surgical Guidance Systems XXIV</span>, SPIE Photonics West, San Francisco, <span class="pub-year">2026</span>.</div>
                 </div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Adaptive Model Predictive Control Using Interval Type-2 Elliptic Fuzzy Broad Learning Systems for Nonlinear Dynamic Digital Time-Delay Systems<span class="badge badge-proceedings">PROCEEDINGS ONLY</span><span class="badge badge-award">🎖 SESSION 4 · BEST PRESENTATION</span></div>
-                    <div class="pub-authors">C. C. Hung, C. C. Tsai, and <span class="pi-name">A. Rospawan</span></div>
-                    <div class="pub-venue"><span class="journal-name">2025 International Conference on System Science and Engineering (ICSSE 2025)</span>, Chiang Mai, Thailand, <span class="pub-year">August 2025</span>.</div>
+                    <div class="pub-title">Cell Mod-SE(2): Group Equivariant Deep Learning for Multi-Class Analysis of Phase Contrast Microscopy Images<span class="badge badge-proceedings">SPIE</span></div>
+                    <div class="pub-authors"><span class="pi-name">C. L. Angelina</span>, S. Vyas, H.-P. Chiu, H. T. Chang, et al.</div>
+                    <div class="pub-venue"><span class="journal-name">Computational Optical Imaging and Artificial Intelligence in Biomedical Sciences III</span>, SPIE, <span class="pub-year">2026</span>.</div>
                 </div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Autonomous and Path-Following Navigation of Differential-Driving AMRs Using Dynamic Control and FWNN-RBLS Compensation<span class="badge badge-proceedings">PROCEEDINGS ONLY</span></div>
-                    <div class="pub-authors">C. W. Tsai, C. C. Tsai, and <span class="pi-name">A. Rospawan</span></div>
-                    <div class="pub-venue"><span class="journal-name">2025 National Symposium on System Science and Engineering (NSSSE 2025)</span>, Taichung, Taiwan, <span class="pub-year">2025</span>.</div>
+                    <div class="pub-title">Alzheimer Severity Classification Using Mod-SE(2) CNN Geometric Deep Learning<span class="badge badge-proceedings">SPIE</span></div>
+                    <div class="pub-authors"><span class="pi-name">C. L. Angelina</span>, S. Vyas, Y. Luo, and H. T. Chang</div>
+                    <div class="pub-venue"><span class="journal-name">Biomedical Imaging and Sensing Conference (BISC)</span>, Proc. SPIE 13702, pp. 37&ndash;42, <span class="pub-year">2025</span>.</div>
                 </div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Adaptive Nonlinear PID Tension Control Using PRFBLS for Industrial Roll-to-Roll Systems<span class="badge badge-proceedings">PROCEEDINGS ONLY</span></div>
-                    <div class="pub-authors">S. C. Wang, C. C. Tsai, and <span class="pi-name">A. Rospawan</span></div>
-                    <div class="pub-venue"><span class="journal-name">2025 International Conference on Advanced Robotics and Intelligent Systems (ARIS 2025)</span>, Taichung, Taiwan, <span class="pub-year">2025</span>.</div>
+                    <div class="pub-title">Hybrid Vision Transformer for Classification of Pancreatic Cystic Lesions<span class="badge badge-proceedings">IEEE</span></div>
+                    <div class="pub-authors"><span class="pi-name">C. L. Angelina</span>, Y. K. Chou, T. C. Lee, et al.</div>
+                    <div class="pub-venue"><span class="journal-name">IEEE ICCE-Taiwan</span>, <span class="pub-year">2023</span>.</div>
                 </div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Global Cooperative Localization Method Using Polynomial Fuzzy Recurrent Broad Learning System for Swarmed Omnidirectional Multirobots with Uncertainties<span class="badge badge-proceedings">PROCEEDINGS ONLY</span></div>
-                    <div class="pub-authors">G. H. Yang, C. C. Tsai, and <span class="pi-name">A. Rospawan</span></div>
-                    <div class="pub-venue"><span class="journal-name">2025 International Conference on Advanced Robotics and Intelligent Systems (ARIS 2025)</span>, Taichung, Taiwan, <span class="pub-year">2025</span>.</div>
+                    <div class="pub-title">AI for Diagnosis of Pancreatic Cystic Lesions Using Patch-Based Segmentation<span class="badge badge-proceedings">TAAI</span></div>
+                    <div class="pub-authors"><span class="pi-name">C. L. Angelina</span>, T. C. Lee, et al.</div>
+                    <div class="pub-venue"><span class="journal-name">TAAI Conference</span>, <span class="pub-year">2023</span>.</div>
                 </div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
             <div class="pub-item">
                 <div class="pub-content">
-                    <div class="pub-title">Nonlinear Adaptive Model Predictive Control for Semiconductor Packaging Oven Using Type-3 Fuzzy Controller with Incremental Broad Learning System<span class="badge badge-proceedings">PROCEEDINGS ONLY</span></div>
-                    <div class="pub-authors">C. C. Hung, C. C. Tsai, and <span class="pi-name">A. Rospawan</span></div>
-                    <div class="pub-venue"><span class="journal-name">2025 International Conference on Advanced Robotics and Intelligent Systems (ARIS 2025)</span>, Taichung, Taiwan, <span class="pub-year">2025</span>.</div>
+                    <div class="pub-title">Computer-Aided Classification of Pancreatic Cystic Types Using VGG19<span class="badge badge-award">BEST PAPER</span></div>
+                    <div class="pub-authors"><span class="pi-name">C. L. Angelina</span>, T. C. Lee, et al.</div>
+                    <div class="pub-venue"><span class="journal-name">IEEE ECBIOS</span> &mdash; Best Paper Award, <span class="pub-year">2021</span>.</div>
                 </div>
-            </div>
-
-            <!-- ===== 2024 ===== -->
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Recurrent Polynomial-Based FBLS for Adaptive Predictive PID Control of Nonlinear Discrete-Time Systems: Comparative Studies on Control Performance and Time Complexity<span class="badge badge-award">🏆 BEST STUDENT PAPER WINNER (1ST PLACE)</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span> and C. C. Tsai</div>
-                    <div class="pub-venue"><span class="journal-name">2024 IEEE International Conference on Systems, Man, and Cybernetics (SMC)</span>, Kuching, Malaysia, <span class="pub-year">2024</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Recurrent+Polynomial+FBLS+Adaptive+Predictive+PID+Discrete-Time+Rospawan+SMC+2024" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Intelligent Data-Driven Control Using Output Recurrent Elliptic Fuzzy BLS for Nonlinear Dynamic Systems<span class="badge badge-proceedings">PROCEEDINGS ONLY</span><span class="badge badge-award">🥉 BEST PAPER · 3RD PLACE</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span> and C. C. Tsai</div>
-                    <div class="pub-venue"><span class="journal-name">中華民國第三十二屆模糊理論及其應用研討會(Fuzzy 2024)</span>, Taiwan, pp. 106–111, <span class="pub-year">2024</span>.</div>
-                </div>
-            </div>
-
-            <!-- ===== 2023 ===== -->
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Output Recurrent Fuzzy Neural LSTM-BLS Controller for Nonlinear Digital Time-Delay Dynamic Systems</div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. C. Tsai, and C. C. Hung</div>
-                    <div class="pub-venue"><span class="journal-name">2023 IEEE International Conference on Systems, Man, and Cybernetics (SMC)</span>, Honolulu, Hawaii, USA, <span class="pub-year">2023</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Output+Recurrent+Fuzzy+Neural+LSTM-BLS+Time-Delay+Rospawan+SMC+2023" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Self-Tuning Predictive PID Control Using Interval Type-2 Fuzzy Neural LSTM Incorporated with Broad Learning System<span class="badge badge-proceedings">PROCEEDINGS ONLY</span><span class="badge badge-award">🥈 BEST STUDENT PAPER · 2ND PLACE</span></div>
-                    <div class="pub-authors">C. C. Hung, C. C. Tsai, and <span class="pi-name">A. Rospawan</span></div>
-                    <div class="pub-venue"><span class="journal-name">2023 International Conference on Fuzzy Theory and Its Applications (iFUZZY 2023)</span>, Penghu, Taiwan, <span class="pub-year">2023</span>.</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Fuzzy Neural LSTM with Recurrent BLS for Adaptive MPC Tracking Control of Nonlinear Systems<span class="badge badge-proceedings">PROCEEDINGS ONLY</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. C. Tsai, and C. C. Hung</div>
-                    <div class="pub-venue"><span class="journal-name">2023 International Conference on Fuzzy Theory and Its Applications (iFUZZY 2023)</span>, Penghu, Taiwan, <span class="pub-year">2023</span>.</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Recurrent Fuzzy Broad Learning Controller for MIMO Nonlinear Digital Time-Delay Dynamic Systems<span class="badge badge-proceedings">PROCEEDINGS ONLY</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. C. Tsai, C. C. Hung, and S. C. Chen</div>
-                    <div class="pub-venue"><span class="journal-name">20th World Congress of the International Fuzzy Systems Association (IFSA)</span>, EXCO, Daegu, Korea, <span class="pub-year">2023</span>.</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Adaptive Predictive PID Control Using Interval Type-2 Fuzzy Broad Learning System<span class="badge badge-proceedings">PROCEEDINGS ONLY</span></div>
-                    <div class="pub-authors">C. C. Tsai, C. C. Hung, and <span class="pi-name">A. Rospawan</span></div>
-                    <div class="pub-venue"><span class="journal-name">2023 International Conference on System Science and Engineering (ICSSE 2023)</span>, Ho Chi Minh City, Vietnam, <span class="pub-year">2023</span>.</div>
-                </div>
-            </div>
-
-            <!-- ===== 2022 ===== -->
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Adaptive Predictive PID Control Using Recurrent Fuzzy Broad Learning System for Accurate Setpoint Tracking of Digital Nonlinear Time-Delay Dynamic Systems<span class="badge badge-award">🎖 BEST CONFERENCE PAPER · HONORABLE MENTION</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. C. Tsai, and F. C. Tai</div>
-                    <div class="pub-venue"><span class="journal-name">2022 International Conference on Advanced Robotics and Intelligent Systems (ARIS 2022)</span>, Taipei Nangang Exhibition Center, Taipei, Taiwan, <span class="pub-year">August 2022</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Adaptive+Predictive+PID+Recurrent+Fuzzy+Broad+Learning+Setpoint+Tracking+Time-Delay+Rospawan+ARIS+2022" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-            
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Adaptive Predictive PID Setpoint Tracking Control of Digital Nonlinear Time-Delay Dynamic Systems Using Interval Type-2 Fuzzy Broad Learning System<span class="badge badge-proceedings">PROCEEDINGS ONLY</span><span class="badge badge-award">🏆 BEST PAPER AWARD</span></div>
-                    <div class="pub-authors">C. C. Tsai, C. C. Hung, and <span class="pi-name">A. Rospawan</span></div>
-                    <div class="pub-venue"><span class="journal-name">2022 Workshop on Consumer Electronics (第二十三屆民生電子研討會)</span>, Huwei Township, Taiwan, <span class="pub-year">2022</span>.</div>
-                </div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Adaptive Predictive MIMO PID Control for Nonlinear MIMO Dynamic Systems Using Recurrent Fuzzy Broad Learning Systems<span class="badge badge-proceedings">PROCEEDINGS ONLY</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. C. Tsai, and C. C. Hung</div>
-                    <div class="pub-venue"><span class="journal-name">2022 International Conference on Fuzzy Theory and Its Applications (iFUZZY 2022)</span>, Kaohsiung, Taiwan, <span class="pub-year">2022</span>.</div>
-                </div>
-            </div>
-            
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Intelligent PID Temperature Control Using Output Recurrent Fuzzy Broad Learning System for Nonlinear Time-Delay Dynamic Systems</div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span>, C. C. Tsai, and F. C. Tai</div>
-                    <div class="pub-venue"><span class="journal-name">2022 International Conference on System Science and Engineering (ICSSE)</span>, Taichung, Taiwan, <span class="pub-year">2022</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://scholar.google.com/scholar?q=Intelligent+PID+Temperature+Output+Recurrent+Fuzzy+Broad+Learning+Rospawan+ICSSE+2022" target="_blank" class="btn-read">Read Article ➜</a></div>
-            </div>
-
-        </div>
-
-        </section>
-
-        <!-- ============================================ -->
-        <!-- ========= THESIS & DISSERTATION ============ -->
-        <!-- ============================================ -->
-        <section class="pub-section">
-        <h3 class="category-title">Thesis &amp; Dissertation</h3>
-        <p class="category-note">Graduate research thesis and dissertation work.</p>
-        <div class="pub-list">
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Adaptive Intelligent SISO and MIMO Control Methods Using Output Recurrent Fuzzy Broad Learning Systems<span class="badge badge-thesis">M.S. THESIS</span><span class="badge badge-award">🏆 1ST PLACE · BEST MASTER THESIS · TFSA 2023</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span></div>
-                    <div class="pub-venue">Master Degree Thesis, Department of Electrical Engineering, <span class="journal-name">National Chung Hsing University</span>, Taichung, Taiwan, <span class="pub-year">2023</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="https://hdl.handle.net/11296/dufe5b" target="_blank" class="btn-read">Read Thesis ➜</a></div>
-            </div>
-
-        </div>
-
-        </section>
-
-        <!-- ============================================ -->
-        <!-- ============== POSTERS ===================== -->
-        <!-- ============================================ -->
-        <section class="pub-section">        <h3 class="category-title">Posters & Award Presentations</h3>
-        <p class="category-note">Research posters presented at scientific competitions and symposia.</p>
-        <div class="pub-list">
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Improving Power Efficiency and Tracking Accuracy in Semiconductor Heating Ovens via Polynomial Fuzzy Stacked BLS Nonlinear MPC<span class="badge badge-poster">POSTER</span><span class="badge badge-award">🥉 3RD PLACE · SEMICONDUCTOR TECH</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span> and C. C. Tsai</div>
-                    <div class="pub-venue"><span class="journal-name">2025 National Chung Hsing University Scientific Paper Competition</span> — Semiconductor Technology Research Field, Taichung, Taiwan, <span class="pub-year">2025</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="awards.html" class="btn-read">View Award ➜</a></div>
-            </div>
-
-            <div class="pub-item">
-                <div class="pub-content">
-                    <div class="pub-title">Data-Driven Learning Control Using Polynomial-Based FBLS for Heating Oven in Semiconductor Packaging Industry<span class="badge badge-poster">POSTER</span><span class="badge badge-award">🥇 1ST PLACE · ENGINEERING TECH</span></div>
-                    <div class="pub-authors"><span class="pi-name">A. Rospawan</span> and C. C. Tsai</div>
-                    <div class="pub-venue"><span class="journal-name">2024 National Chung Hsing University Scientific Paper Competition</span> — Engineering Technology Research Field, Taichung, Taiwan, <span class="pub-year">2024</span>.</div>
-                </div>
-                <div class="pub-actions"><a href="awards.html" class="btn-read">View Award ➜</a></div>
+                <div class="pub-actions"><a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank" class="btn-read">Read Article &#10148;</a></div>
             </div>
 
         </div>
@@ -817,14 +326,14 @@
     </div>
 
     <footer>
-        <h3 style="color: #fff; margin-top: 0; font-size: 1.0rem;">Rospawan Advanced Control and Systems Lab</h3>
+        <h3 style="color: #fff; margin-top: 0; font-size: 1.0rem;">Clara Lavita Angelina</h3>
         <div class="footer-links">
-            <a href="https://scholar.google.com/citations?user=oFUWGWoAAAAJ" target="_blank">Google Scholar</a>
-            <a href="https://www.researchgate.net/profile/Ali-Rospawan" target="_blank">ResearchGate</a>
-            <a href="https://www.linkedin.com/in/alirospawan/" target="_blank">LinkedIn</a>
-            <a href="https://orcid.org/0000-0001-5667-2269" target="_blank">ORCID</a>
+            <a href="https://scholar.google.co.id/citations?user=XUPXyj0AAAAJ&hl=id" target="_blank">Google Scholar</a>
+            <a href="https://orcid.org/0000-0002-0375-3759" target="_blank">ORCID</a>
+            <a href="https://www.linkedin.com/in/clara-lavita-angelina" target="_blank">LinkedIn</a>
+            <a href="mailto:claralavita52@gmail.com">Email</a>
         </div>
-        <p style="margin-top: 30px; opacity: 0.5; font-size: 0.8rem;">© 2026 Ali Rospawan. All rights reserved.</p>
+        <p style="margin-top: 30px; opacity: 0.6; font-size: 0.8rem;">&copy; 2026 Clara Lavita Angelina. All rights reserved.</p>
     </footer>
 
     <script>
@@ -835,9 +344,6 @@
             const counter  = document.getElementById('result-count');
             const total    = items.length;
 
-            // ---------- 1. Tag each item with its publication year ----------
-            // Reads from the .pub-year span which may contain "2026",
-            // "August 2022", "May 2025", etc.
             items.forEach(item => {
                 const yearEl = item.querySelector('.pub-year');
                 if (yearEl) {
@@ -846,10 +352,6 @@
                 }
             });
 
-            // ---------- 2. Auto-number each section (newest = highest) ----------
-            // Inserts a small "#N" badge inline at the start of every title.
-            // Numbering restarts per section and is in REVERSE order so the
-            // top (newest) publication gets the highest number.
             sections.forEach(section => {
                 const sectionItems = section.querySelectorAll('.pub-item');
                 const count = sectionItems.length;
@@ -863,40 +365,26 @@
                 });
             });
 
-            // ---------- 3. Auto-calculate statistics ----------
-            // Match sections by their category-title text (case-insensitive)
-            // so the labels stay in sync even if you rename or reorder.
             const sectionCount = {};
             sections.forEach(section => {
                 const titleNode = section.querySelector('.category-title');
                 const title = (titleNode ? titleNode.textContent : '').toLowerCase();
                 const n = section.querySelectorAll('.pub-item').length;
-                if      (title.includes('journal article'))   sectionCount.journals    = n;
-                else if (title.includes('sinta'))             sectionCount.sinta_sec   = n;
-                else if (title.includes('conference'))        sectionCount.conferences = n;
-                else if (title.includes('poster'))            sectionCount.posters     = n;
-                else if (title.includes('thesis'))            sectionCount.thesis      = n;
+                if      (title.includes('journal article')) sectionCount.journals    = n;
+                else if (title.includes('conference'))       sectionCount.conferences = n;
             });
 
-            // SINTA-Indexed stat counts every paper that carries a SINTA badge,
-            // regardless of which section the paper sits in (a Q4 journal can
-            // also be SINTA-indexed, etc.).
             const stats = {
                 total:       total,
                 journals:    sectionCount.journals    || 0,
-                q1:          document.querySelectorAll('.badge-q1').length,
-                q2:          document.querySelectorAll('.badge-q2').length,
-                sinta:       document.querySelectorAll('.badge-sinta').length,
                 conferences: sectionCount.conferences || 0,
-                posters:     sectionCount.posters     || 0
+                awards:      document.querySelectorAll('.badge-award').length
             };
             Object.entries(stats).forEach(([key, value]) => {
                 const el = document.querySelector(`[data-stat="${key}"]`);
                 if (el) el.textContent = value;
             });
 
-            // ---------- 4. Auto-generate year filter buttons ----------
-            // Collect unique years from the items, sort newest first, render.
             const years = new Set();
             items.forEach(item => { if (item.dataset.year) years.add(item.dataset.year); });
             Array.from(years).sort((a, b) => b - a).forEach(year => {
@@ -907,7 +395,6 @@
                 filterContainer.appendChild(btn);
             });
 
-            // ---------- 5. Filtering ----------
             function applyFilter(year) {
                 let visibleCount = 0;
                 items.forEach(item => {
@@ -926,7 +413,6 @@
                 }
             }
 
-            // Wire up clicks on EVERY filter button (including ones just generated)
             filterContainer.addEventListener('click', (e) => {
                 const btn = e.target.closest('.filter-btn');
                 if (!btn) return;
@@ -935,7 +421,6 @@
                 applyFilter(btn.dataset.year);
             });
 
-            // Initial result-count text
             applyFilter('all');
         })();
     </script>
